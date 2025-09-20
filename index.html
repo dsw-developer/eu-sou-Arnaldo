@@ -1,4 +1,160 @@
 <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Arnaldo Barbosa</title>
+
+    <!-- FontAwesome / Tailwind / AOS / Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .contact-button { margin-right: 0.75rem; font-size: 1.4rem; }
+        .chart .outer { transition: stroke-dashoffset 1s ease; }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-xl p-8 text-center">
+        <div class="profile-picture mx-auto mb-4">
+            <img src="https://via.placeholder.com/120" width="120" height="120" alt="Sua Foto" class="rounded-full border-4 border-blue-700 shadow-md">
+        </div>
+        <h1 class="text-3xl font-extrabold text-gray-800">Arnaldo Barbosa</h1>
+        <p class="text-lg text-gray-600">Developer Web | Analista de Dados</p>
+        <p class="text-gray-500">Luanda, Angola</p>
+        <div class="contact-icons mt-4">
+            <a href="mailto:Arnaldobarbosa690@gmail.com" class="contact-button"><i class="fas fa-envelope text-red-500"></i></a>
+            <a href="tel:+244937707227" class="contact-button"><i class="fas fa-phone text-green-500"></i></a>
+            <a href="https://github.com/dsw-developer" target="_blank" class="contact-button"><i class="fab fa-github text-gray-700"></i></a>
+            <a href="https://www.linkedin.com/in/arnaldo-barbosa-3ab517213/" target="_blank" class="contact-button"><i class="fab fa-linkedin text-blue-700"></i></a>
+        </div>
+    </header>
+
+    <!-- SOBRE MIM -->
+    <section id="about" class="container mx-auto py-12 px-6 bg-white shadow-lg rounded-lg my-10 flex flex-col md:flex-row items-center md:space-x-8">
+        <img src="https://via.placeholder.com/250" alt="Sobre mim" class="rounded-lg shadow-lg mb-6 md:mb-0" data-aos="fade-right">
+        <div data-aos="fade-left">
+            <h2 class="text-3xl font-bold mb-4 border-b-4 border-blue-700 inline-block">Sobre mim</h2>
+            <p class="text-gray-700 leading-relaxed">Sou um estudante carismático formado em Engenharia Informática e Comunicação. Tenho experiência em desenvolvimento web e análise de dados. Busco aplicar conhecimentos para obter resultados positivos, focando em trabalho eficiente e que gera evolução mútua.</p>
+            <a href="about.html" class="inline-block mt-4 text-blue-700 font-semibold hover:underline">Ler mais</a>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experience" class="container mx-auto py-12 px-6 bg-white shadow-lg rounded-lg my-10">
+        <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-700 inline-block" data-aos="fade-right">Experiência Profissional</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="zoom-in">
+                <h3 class="text-xl font-semibold text-blue-800">Gestor de Conteúdo Web</h3>
+                <span class="text-gray-500 text-sm">Frontend Developer - FDA | 2019 - 2020</span>
+                <p class="mt-2 text-gray-700">Refatoração de código, desenvolvimento de websites e otimização de UX/UI para clientes da empresa Fronteend Develop Angola.</p>
+            </div>
+            <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+                <h3 class="text-xl font-semibold text-blue-800">Projetos Freelance</h3>
+                <span class="text-gray-500 text-sm">2020 - Atual</span>
+                <p class="mt-2 text-gray-700">Criação de websites, dashboards analíticos e automações para pequenas empresas e empreendedores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="container mx-auto py-12 px-6 bg-white shadow-lg rounded-lg my-10">
+        <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-700 inline-block" data-aos="fade-right">Competências</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 p-6 shadow-md rounded-lg text-center" data-aos="zoom-in">
+                <i class="fas fa-code text-4xl mb-4 text-blue-700"></i>
+                <h3 class="text-xl font-semibold">Desenvolvimento Web</h3>
+                <p>HTML, CSS, JavaScript, React, Node.js, Git, WordPress</p>
+            </div>
+            <div class="bg-gray-50 p-6 shadow-md rounded-lg text-center" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-database text-4xl mb-4 text-green-700"></i>
+                <h3 class="text-xl font-semibold">Banco de Dados</h3>
+                <p>MySQL, SQL, PhpMyAdmin</p>
+            </div>
+            <div class="bg-gray-50 p-6 shadow-md rounded-lg text-center" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-chart-line text-4xl mb-4 text-red-700"></i>
+                <h3 class="text-xl font-semibold">Análise de Dados</h3>
+                <p>Excel, Power BI, Tableau, R, Power Query</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCAÇÃO -->
+    <section id="education" class="container mx-auto py-12 px-6 bg-white shadow-lg rounded-lg my-10">
+        <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-700 inline-block" data-aos="fade-right">Escolaridade</h2>
+        <div class="education-slider owl-carousel" data-aos="fade-up">
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-semibold mb-2">Universidade Óscar Ribas</h3>
+                <p class="text-gray-600">Licenciado em Engenharia Informática e Comunicação</p>
+                <p class="text-gray-500 text-sm">2017 - 2023</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-semibold mb-2">Colégio Pitruca</h3>
+                <p class="text-gray-600">Ensino Médio em Informática</p>
+                <p class="text-gray-500 text-sm">2014 - 2016</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projects" class="container mx-auto py-12 px-6 bg-white shadow-lg rounded-lg my-10">
+        <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-700 inline-block" data-aos="fade-right">Projetos</h2>
+        <div class="project-slider owl-carousel" data-aos="fade-up">
+            <div class="project p-6">
+                <img src="https://via.placeholder.com/350x200" alt="Be Sporty" class="rounded-lg shadow-lg mb-4">
+                <h3 class="text-xl font-semibold">Be Sporty</h3>
+                <p class="text-gray-600">Plataforma de e-commerce para venda de materiais desportivos.</p>
+                <a href="https://dsw-developer.github.io/BE-SPORTY/" class="text-blue-700 hover:underline">Ver projeto</a>
+            </div>
+            <div class="project p-6">
+                <img src="https://via.placeholder.com/350x200" alt="Livraria Online" class="rounded-lg shadow-lg mb-4">
+                <h3 class="text-xl font-semibold">Livraria Online</h3>
+                <p class="text-gray-600">Sistema para distribuir livros digitais aos alunos da universidade.</p>
+                <a href="#" class="text-blue-700 hover:underline">Ver projeto</a>
+            </div>
+            <div class="project p-6">
+                <img src="https://via.placeholder.com/350x200" alt="Dashboard Analytics" class="rounded-lg shadow-lg mb-4">
+                <h3 class="text-xl font-semibold">Dashboard Analytics</h3>
+                <p class="text-gray-600">Dashboard interativo usando Power BI e integração com APIs.</p>
+                <a href="#" class="text-blue-700 hover:underline">Ver projeto</a>
+            </div>
+            <div class="project p-6">
+                <img src="https://via.placeholder.com/350x200" alt="Sistema de Gestão" class="rounded-lg shadow-lg mb-4">
+                <h3 class="text-xl font-semibold">Sistema de Gestão</h3>
+                <p class="text-gray-600">ERP simplificado para clientes, vendas e estoque de pequenas empresas.</p>
+                <a href="#" class="text-blue-700 hover:underline">Ver projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".education-slider, .project-slider").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
+            });
+            AOS.init({ duration: 800, once: true });
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -402,3 +558,4 @@
 </body>
 
 </html>
+
