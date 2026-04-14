@@ -1,19 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Impacto Eventos - Iluminação LED</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impacto Eventos - Iluminação LED</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0A1F44;
+    color: white;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+header h1 {
+    color: #00BFFF;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00BFFF;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+}
+
+.bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #00BFFF;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px #00BFFF;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.services {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #001F54;
+    padding: 30px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 0 20px rgba(0,191,255,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.gallery {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #001233;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>Impacto Eventos</h1>
     <nav>
         <a href="#">Início</a>
-        <a href="#">Serviços</a>
-        <a href="#">Galeria</a>
-        <a href="#">Contato</a>
+        <a href="#services">Serviços</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#contact">Contato</a>
     </nav>
 </header>
 
@@ -29,102 +178,39 @@
     </div>
 </section>
 
-<section class="services">
+<section id="services" class="services">
     <h2>Nossos Serviços</h2>
-    <div class="card">
-        <h3>Casamentos</h3>
-        <p>Ambientes românticos com iluminação LED.</p>
-    </div>
+    <div class="cards">
+        <div class="card">
+            <h3>Casamentos</h3>
+            <p>Ambientes românticos com iluminação LED.</p>
+        </div>
 
-    <div class="card">
-        <h3>Shows</h3>
-        <p>Efeitos visuais profissionais.</p>
-    </div>
+        <div class="card">
+            <h3>Shows</h3>
+            <p>Efeitos visuais profissionais de alto impacto.</p>
+        </div>
 
-    <div class="card">
-        <h3>Eventos Corporativos</h3>
-        <p>Elegância e tecnologia.</p>
+        <div class="card">
+            <h3>Eventos Corporativos</h3>
+            <p>Elegância e tecnologia para empresas.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Galeria de Eventos</h2>
+    <div class="grid">
+        <img src="img/evento1.jpg">
+        <img src="img/evento2.jpg">
+        <img src="img/evento3.jpg">
+        <img src="img/evento4.jpg">
     </div>
 </section>
 
 <footer>
     <p>© 2026 Impacto Eventos - Todos os direitos reservados</p>
 </footer>
-    <style>
-        body {
-    margin: 0;
-    font-family: Arial;
-    background: #0A1F44;
-    color: white;
-}
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #001233;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(blue, #001233);
-}
-
-.hero h2 {
-    font-size: 40px;
-}
-
-.btn {
-    background: #00BFFF;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #00BFFF;
-}
-
-.services {
-    padding: 50px;
-    text-align: center;
-}
-
-.card {
-    background: #001F54;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    width: 250px;
-    box-shadow: 0 0 15px #00BFFF;
-}
-.hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.bg-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.overlay {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    top: 40%;
-    color: white;
-}
-    </style>
 </body>
 </html>
-
