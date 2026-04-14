@@ -3,117 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impacto Eventos</title>
+<title>Impacto Eventos - Iluminação LED</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
-body { background:#0A1F44; color:white; scroll-behavior:smooth; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0A1F44;color:white;scroll-behavior:smooth;}
 
-header {
- position:fixed; width:100%; top:0;
- display:flex; justify-content:space-between; align-items:center;
+header{
+ position:fixed;width:100%;top:0;
+ display:flex;justify-content:space-between;align-items:center;
  padding:20px 50px;
  background:rgba(0,0,0,0.6);
  backdrop-filter:blur(12px);
  z-index:1000;
 }
-
-header h1 { color:#00BFFF; font-weight:700; letter-spacing:1px; }
-
-nav a {
- color:white; margin:0 15px; text-decoration:none;
- position:relative; transition:0.3s;
+header h1{color:#00BFFF;}
+nav a{
+ color:white;margin:0 15px;text-decoration:none;position:relative;
 }
-nav a::after {
- content:""; position:absolute; width:0; height:2px;
- bottom:-5px; left:0; background:#00BFFF; transition:0.3s;
+nav a::after{
+ content:"";position:absolute;width:0;height:2px;
+ bottom:-5px;left:0;background:#00BFFF;transition:0.3s;
 }
-nav a:hover::after { width:100%; }
+nav a:hover::after{width:100%;}
 
-.hero { position:relative; height:100vh; }
-.bg-video {
- position:absolute; width:100%; height:100%; object-fit:cover;
- filter:brightness(0.5);
+.hero{position:relative;height:100vh;}
+.bg-video{
+ position:absolute;width:100%;height:100%;
+ object-fit:cover;filter:brightness(0.5);
 }
 
-.overlay {
- position:absolute; width:100%; height:100%;
- display:flex; flex-direction:column; justify-content:center; align-items:center;
- text-align:center; padding:20px;
+.overlay{
+ position:absolute;width:100%;height:100%;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ text-align:center;padding:20px;
 }
-
-.overlay h2 {
- font-size:60px; font-weight:700;
- text-shadow:0 0 20px rgba(0,191,255,0.8);
+.overlay h2{
+ font-size:60px;
+ text-shadow:0 0 20px #00BFFF;
 }
+.overlay p{margin:20px 0;}
 
-.overlay p { font-size:20px; margin:20px 0; }
-
-.btn {
- background:#00BFFF; padding:15px 35px; border-radius:40px;
- text-decoration:none; color:white; font-weight:600;
+.btn{
+ background:#00BFFF;padding:15px 35px;
+ border-radius:40px;color:white;text-decoration:none;
  box-shadow:0 0 25px #00BFFF;
+}
+.btn:hover{transform:scale(1.1);}
+
+section{padding:100px 50px;text-align:center;}
+
+.cards{
+ display:flex;justify-content:center;flex-wrap:wrap;gap:20px;
+}
+.card{
+ background:#001F54;padding:30px;border-radius:20px;width:280px;
+ box-shadow:0 0 25px rgba(0,191,255,0.3);
  transition:0.3s;
 }
-.btn:hover { transform:scale(1.1); box-shadow:0 0 40px #00BFFF; }
-
-.services, .gallery, .stats {
- padding:100px 50px; text-align:center;
+.card:hover{
+ transform:translateY(-10px);
+ box-shadow:0 0 40px #00BFFF;
 }
 
-.cards {
- display:flex; justify-content:center; flex-wrap:wrap; gap:25px;
+.stats{
+ background:#001233;
+ display:flex;justify-content:center;gap:50px;flex-wrap:wrap;
 }
+.stat h3{font-size:40px;color:#00BFFF;}
 
-.card {
- background:linear-gradient(145deg,#001F54,#002a80);
- padding:30px; border-radius:20px;
- width:280px;
- box-shadow:0 0 25px rgba(0,191,255,0.3);
- transition:0.4s;
-}
-.card:hover {
- transform:translateY(-15px) scale(1.05);
- box-shadow:0 0 40px rgba(0,191,255,0.8);
-}
-
-.grid {
+.grid{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
- gap:20px;
+ gap:15px;
+}
+.grid img{
+ width:100%;
+ border-radius:10px;
+ transition:0.3s;
+}
+.grid img:hover{
+ transform:scale(1.05);
+ box-shadow:0 0 25px #00BFFF;
 }
 
-.grid img {
- width:100%; border-radius:15px;
- transition:0.4s;
- box-shadow:0 0 15px rgba(0,0,0,0.5);
-}
-.grid img:hover {
- transform:scale(1.07);
- box-shadow:0 0 30px #00BFFF;
+.videos video{
+ width:300px;margin:10px;border-radius:10px;
 }
 
-.stats {
- background:#001233;
- display:flex; justify-content:center; gap:50px; flex-wrap:wrap;
-}
-
-.stat h3 { font-size:40px; color:#00BFFF; }
-.stat p { font-size:18px; }
-
-.whatsapp {
- position:fixed; bottom:20px; right:20px;
- background:#25D366; padding:15px;
- border-radius:50%; font-size:22px;
+.whatsapp{
+ position:fixed;bottom:20px;right:20px;
+ background:#25D366;color:white;
+ padding:15px;border-radius:50%;
+ font-size:22px;text-decoration:none;
  box-shadow:0 0 15px #25D366;
- text-decoration:none; color:white;
 }
 
-footer {
- text-align:center; padding:30px; background:#001233;
+footer{
+ background:#001233;
+ padding:30px;
 }
-
 </style>
 </head>
 
@@ -125,14 +117,15 @@ footer {
   <a href="#">Início</a>
   <a href="#services">Serviços</a>
   <a href="#gallery">Galeria</a>
-  <a href="#contact">Contato</a>
  </nav>
 </header>
 
+<!-- HERO COM VIDEO ONLINE -->
 <section class="hero">
  <video autoplay muted loop class="bg-video">
-  <source src="videos/evento.mp4" type="video/mp4">
+  <source src="https://cdn.coverr.co/videos/coverr-colorful-stage-lights-1570/1080p.mp4" type="video/mp4">
  </video>
+
  <div class="overlay">
   <h2>Iluminação LED de Alto Impacto</h2>
   <p>Transformamos eventos em experiências inesquecíveis</p>
@@ -140,29 +133,42 @@ footer {
  </div>
 </section>
 
-<section id="services" class="services">
+<!-- SERVIÇOS -->
+<section id="services">
  <h2>Nossos Serviços</h2>
  <div class="cards">
-  <div class="card"><h3>Casamentos</h3><p>Ambientes luxuosos e românticos.</p></div>
-  <div class="card"><h3>Shows</h3><p>Iluminação profissional de palco.</p></div>
+  <div class="card"><h3>Casamentos</h3><p>Ambiente romântico com LED.</p></div>
+  <div class="card"><h3>Shows</h3><p>Iluminação de palco profissional.</p></div>
   <div class="card"><h3>Eventos Corporativos</h3><p>Elegância e tecnologia.</p></div>
  </div>
 </section>
 
+<!-- ESTATÍSTICAS -->
 <section class="stats">
- <div class="stat"><h3>+500</h3><p>Eventos Realizados</p></div>
- <div class="stat"><h3>+300</h3><p>Clientes Satisfeitos</p></div>
- <div class="stat"><h3>10+</h3><p>Anos de Experiência</p></div>
+ <div class="stat"><h3>+500</h3><p>Eventos</p></div>
+ <div class="stat"><h3>+300</h3><p>Clientes</p></div>
+ <div class="stat"><h3>10+</h3><p>Anos</p></div>
 </section>
 
-<section id="gallery" class="gallery">
+<!-- GALERIA COM IMAGENS ONLINE -->
+<section id="gallery">
  <h2>Galeria de Eventos</h2>
  <div class="grid">
-  <img src="img/evento1.jpg">
-  <img src="img/evento2.jpg">
-  <img src="img/evento3.jpg">
-  <img src="img/evento4.jpg">
+  <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
+  <img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg">
+  <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg">
+  <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg">
+  <img src="https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg">
+  <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg">
  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos">
+ <h2>Vídeos dos Eventos</h2>
+
+ <video controls src="https://player.vimeo.com/external/370467553.sd.mp4?s=7c3b"></video>
+ <video controls src="https://player.vimeo.com/external/449826626.sd.mp4?s=9f1a"></video>
 </section>
 
 <a href="https://wa.me/244937707227" class="whatsapp">💬</a>
